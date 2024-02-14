@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Metadata and Title -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- Custom Header Component -->
+    <custom-header text="HDB Carpark Information"></custom-header>
+
+    <!-- Navigation Bar -->
+    <div class="bg-success px-1 px-md-5">
+      <div class="container">
+        <span class="me-3">Search by</span>
+        <button
+          class="border-0 rounded-top fs-5 px-3 py-1 bg-light"
+          id="prefixBtn"
+        >
+          Prefix
+        </button>
+        <button
+          class="border-0 rounded-top fs-5 px-3 py-1 bg-transparent"
+          id="heightBtn"
+        >
+          Gantry Height
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <div class="container py-5">
+      <!-- Search Forms -->
+      <div
+        class="col-12 col-md-6 d-flex align-items-center justify-content-center w-100"
+      >
+        <!-- Prefix Search Form -->
+        <form action="" id="carParkNoForm" class="col-12 col-md-6">
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              id="carparkNo"
+              required
+              placeholder="Enter the prefix of the car park number"
+            />
+            <button class="btn btn-outline-success" type="submit" id="button-1">
+              Search
+            </button>
+          </div>
+        </form>
+
+        <!-- Gantry Height Search Form -->
+        <form action="" id="gantryHeightForm" class="col-12 col-md-6 d-none">
+          <div class="input-group mb-3">
+            <input
+              type="number"
+              class="form-control"
+              id="gantryHeight"
+              required
+              placeholder="Enter car park gantry height (in meters)"
+            />
+            <button class="btn btn-outline-success" type="submit" id="button-2">
+              Search
+            </button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Search Results Section -->
+      <div>
+        <div>
+          <!-- Display Car Park Quantity -->
+          <p id="carkParkQty"></p>
+        </div>
+
+        <!-- Display Search Results -->
+        <div class="row" id="searchResultsContainer"></div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Custom JavaScript -->
+    <script src="custom-elements/car-park-card.js"></script>
+    <script src="custom-elements/custom-header.js"></script>
+    <script src="toggle.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
